@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const btn = document.querySelector('.btn-country');
-const countriesContainer = document.querySelector('.countries');
+const btn = document.querySelector('.btn-country')
+const countriesContainer = document.querySelector('.countries')
 
 const renderCountry = function (data, className = '') {
   const html = `
@@ -17,23 +17,23 @@ const renderCountry = function (data, className = '') {
       <p class="country__row"><span>💰</span>${data.currencies[0].name}</p>
     </div>
   </article>
-  `;
-  countriesContainer.insertAdjacentHTML('beforeend', html);
-  countriesContainer.style.opacity = 1;
-};
+  `
+  countriesContainer.insertAdjacentHTML('beforeend', html)
+  countriesContainer.style.opacity = 1
+}
 
 const renderError = function (msg) {
-  countriesContainer.insertAdjacentText('beforeend', msg);
-  countriesContainer.style.opacity = 1;
-};
+  countriesContainer.insertAdjacentText('beforeend', msg)
+  countriesContainer.style.opacity = 1
+}
 
 const getJSON = function (url, errorMsg = 'Something went wrong') {
   return fetch(url).then(response => {
-    if (!response.ok) throw new Error(`${errorMsg} (${response.status})`);
+    if (!response.ok) throw new Error(`${errorMsg} (${response.status})`)
 
-    return response.json();
-  });
-};
+    return response.json()
+  })
+}
 
 /*
 ///////////////////////////////////////
@@ -72,7 +72,7 @@ getCountryData('usa');
 getCountryData('germany');
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Welcome to Callback Hell
 
 /*
@@ -123,7 +123,6 @@ setTimeout(() => {
     }, 1000);
   }, 1000);
 }, 1000);
-
 
 ///////////////////////////////////////
 // Consuming Promises
@@ -216,10 +215,10 @@ btn.addEventListener('click', function () {
 // getCountryData('australia');
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #1
 
-/* 
+/*
 In this challenge you will build a function 'whereAmI' which renders a country ONLY based on GPS coordinates. For that, you will use a second API to geocode coordinates.
 
 Here are your tasks:
@@ -268,7 +267,6 @@ whereAmI(52.508, 13.381);
 whereAmI(19.037, 72.873);
 whereAmI(-33.933, 18.474);
 
-
 ///////////////////////////////////////
 // The Event Loop in Practice
 console.log('Test start');
@@ -281,7 +279,6 @@ Promise.resolve('Resolved promise 2').then(res => {
 });
 
 console.log('Test end');
-
 
 ///////////////////////////////////////
 // Building a Simple Promise
@@ -336,7 +333,6 @@ wait(1)
 Promise.resolve('abc').then(x => console.log(x));
 Promise.reject(new Error('Problem!')).catch(x => console.error(x));
 
-
 ///////////////////////////////////////
 // Promisifying the Geolocation API
 const getPosition = function () {
@@ -379,10 +375,10 @@ const whereAmI = function () {
 btn.addEventListener('click', whereAmI);
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #2
 
-/* 
+/*
 Build the image loading functionality that I just showed you on the screen.
 
 Tasks are not super-descriptive this time, so that you can figure out some stuff on your own. Pretend you're working on your own 😉
@@ -451,7 +447,6 @@ createImage('img/img-1.jpg')
   })
   .catch(err => console.error(err));
 
-
 ///////////////////////////////////////
 // Consuming Promises with Async/Await
 // Error Handling With try...catch
@@ -481,10 +476,10 @@ const whereAmI = async function () {
     const res = await fetch(
       `https://restcountries.eu/rest/v2/name/${dataGeo.country}`
     );
-    
+
     // BUG in video:
     // if (!resGeo.ok) throw new Error('Problem getting country');
-    
+
     // FIX:
     if (!res.ok) throw new Error('Problem getting country');
 
@@ -508,7 +503,6 @@ console.log('FIRST');
 // } catch (err) {
 //   alert(err.message);
 // }
-
 
 ///////////////////////////////////////
 // Returning Values from Async Functions
@@ -566,7 +560,6 @@ console.log('1: Will get location');
   console.log('3: Finished getting location');
 })();
 
-
 ///////////////////////////////////////
 // Running Promises in Parallel
 const get3Countries = async function (c1, c2, c3) {
@@ -593,7 +586,6 @@ const get3Countries = async function (c1, c2, c3) {
   }
 };
 get3Countries('portugal', 'canada', 'tanzania');
-
 
 ///////////////////////////////////////
 // Other Promise Combinators: race, allSettled and any
@@ -647,10 +639,10 @@ Promise.any([
   .catch(err => console.error(err));
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #3
 
-/* 
+/*
 PART 1
 Write an async function 'loadNPause' that recreates Coding Challenge #2, this time using async/await (only the part where the promise is consumed). Compare the two versions, think about the big differences, and see which one you like more.
 Don't forget to test the error handler, and to set the network speed to 'Fast 3G' in the dev tools Network tab.

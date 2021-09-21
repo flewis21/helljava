@@ -1,29 +1,32 @@
-+'use strict';
+6+'use strict';
+const http = require('http');
+const fs = require('fs');
+const htmlFile = './complete-javascript-course/01-Part-1/index.html';
+
 
 module.exports.helloWorld = (event, context, callback) => {
-  const response = {
-  	WriteHead: (404, { 'Content-Type': 'text/plain'}),
-  	Write: ('Error 404: Resource not found.'),
-    statusCode: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*', // Required for CORS support to work
-    },
-    body: JSON.stringify({
-      message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: event,
-	}),
+  	const response = {
+      	statusCode: 200,
+    	headers: {
+      		'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+    	},
+    	body: JSON.stringify({
+      	message: 'Go Serverless v1.0! Your function executed successfully!',
+      		input: event,
+		}),
+ 	};
  };
 
- callback(null, response) = {
- 
-	if (req.Method == 'GET' && req.url == '/') {
-		res.WriteHead(200, { 'content-type': 'text/html' });
-		fs.createReadStream('./complete-javascript-course/01-Fundamentals-Part-1/starter/index.html').pipe(res);
+ 	callback(null, response) = {
+
+
+module.exports.hellJava = fs.readFile(htmlFile, 'UTF-8', (err, data) =? {
+	res.WriteHead(200, { 'content-type': 'text/html' });
 	} else {
-		send404(res);
-	}
- };
-};
+			send404(res);
+		}
+ 	};
+ 	
 console.log('server running on port 4000');
 	
 var nodegit = require('nodegit'),

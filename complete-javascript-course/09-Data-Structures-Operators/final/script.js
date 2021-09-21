@@ -1,20 +1,20 @@
-'use strict';
+'use strict'
 
-const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
 const openingHours = {
   [weekdays[3]]: {
     open: 12,
-    close: 22,
+    close: 22
   },
   [weekdays[4]]: {
     open: 11,
-    close: 23,
+    close: 23
   },
   [weekdays[5]]: {
     open: 0, // Open 24 hours
-    close: 24,
-  },
-};
+    close: 24
+  }
+}
 
 const restaurant = {
   name: 'Classico Italiano',
@@ -26,27 +26,27 @@ const restaurant = {
   // ES6 enhanced object literals
   openingHours,
 
-  order(starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  order (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]]
   },
 
-  orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+  orderDelivery ({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
     console.log(
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
-    );
+    )
   },
 
-  orderPasta(ing1, ing2, ing3) {
+  orderPasta (ing1, ing2, ing3) {
     console.log(
       `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
-    );
+    )
   },
 
-  orderPizza(mainIngredient, ...otherIngredients) {
-    console.log(mainIngredient);
-    console.log(otherIngredients);
-  },
-};
+  orderPizza (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient)
+    console.log(otherIngredients)
+  }
+}
 
 /*
 ///////////////////////////////////////
@@ -72,10 +72,10 @@ for (const flight of flights.split('+')) {
 }
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #4
 
-/* 
+/*
 Write a program that receives a list of variable names written in underscore_case and convert them to camelCase.
 
 The input will come from a textarea inserted into the DOM (see code below), and conversion will happen when the button is pressed.
@@ -83,7 +83,7 @@ The input will come from a textarea inserted into the DOM (see code below), and 
 THIS TEST DATA (pasted to textarea)
 underscore_case
  first_name
-Some_Variable 
+Some_Variable
   calculate_AGE
 delayed_departure
 
@@ -177,7 +177,6 @@ planesInLine(5);
 planesInLine(3);
 planesInLine(12);
 
-
 ///////////////////////////////////////
 // Working With Strings - Part 2
 
@@ -240,7 +239,6 @@ checkBaggage('I have a laptop, some Food and a pocket Knife');
 checkBaggage('Socks and camera');
 checkBaggage('Got some snacks and a gun for protection');
 
-
 ///////////////////////////////////////
 // Working With Strings - Part 1
 const airline = 'TAP Air Portugal';
@@ -284,10 +282,10 @@ console.log(typeof new String('jonas'));
 console.log(typeof new String('jonas').slice(1));
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #3
 
-/* 
+/*
 Let's continue with our football betting app! This time, we have a map with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
 
 1. Create an array 'events' of the different game events that happened (no duplicates)
@@ -310,8 +308,8 @@ const gameEvents = new Map([
   [72, '🔁 Substitution'],
   [76, '⚽️ GOAL'],
   [80, '⚽️ GOAL'],
-  [92, '🔶 Yellow card'],
-]);
+  [92, '🔶 Yellow card']
+])
 
 /*
 // 1.
@@ -374,7 +372,6 @@ console.log([...question]);
 console.log([...question.keys()]);
 console.log([...question.values()]);
 
-
 ///////////////////////////////////////
 // Maps: Fundamentals
 const rest = new Map();
@@ -407,7 +404,6 @@ console.log(rest);
 console.log(rest.size);
 
 console.log(rest.get(arr));
-
 
 ///////////////////////////////////////
 // Sets
@@ -446,10 +442,10 @@ console.log(
 console.log(new Set('jonasschmedtmann').size);
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #2
 
-/* 
+/*
 Let's continue with our football betting app!
 
 1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
@@ -485,7 +481,7 @@ const game = {
       'Coman',
       'Muller',
       'Gnarby',
-      'Lewandowski',
+      'Lewandowski'
     ],
     [
       'Burki',
@@ -498,8 +494,8 @@ const game = {
       'Hazard',
       'Brandt',
       'Sancho',
-      'Gotze',
-    ],
+      'Gotze'
+    ]
   ],
   score: '4:0',
   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
@@ -507,9 +503,9 @@ const game = {
   odds: {
     team1: 1.33,
     x: 3.25,
-    team2: 6.5,
-  },
-};
+    team2: 6.5
+  }
+}
 
 /*
 // 1.
@@ -568,7 +564,6 @@ for (const [day, { open, close }] of entries) {
   console.log(`On ${day} we open at ${open} and close at ${close}`);
 }
 
-
 ///////////////////////////////////////
 // Optional Chaining
 if (restaurant.openingHours && restaurant.openingHours.mon)
@@ -601,7 +596,6 @@ console.log(users[0]?.name ?? 'User array empty');
 if (users.length > 0) console.log(users[0].name);
 else console.log('user array empty');
 
-
 ///////////////////////////////////////
 // The for-of Loop
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
@@ -615,10 +609,10 @@ for (const [i, el] of menu.entries()) {
 // console.log([...menu.entries()]);
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #1
 
-/* 
+/*
 We're building a football betting app (soccer for my American friends 😅)!
 
 Suppose we get data from a web service about a certain game (below). In this challenge we're gonna work with the data. So here are your tasks:
@@ -672,7 +666,6 @@ printGoals(...game.scored);
 team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
 
-
 ///////////////////////////////////////
 // The Nullish Coalescing Operator
 restaurant.numGuests = 0;
@@ -715,7 +708,6 @@ if (restaurant.orderPizza) {
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
-
 ///////////////////////////////////////
 // Rest Pattern and Parameters
 // 1) Destructuring
@@ -753,7 +745,6 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
-
 
 ///////////////////////////////////////
 // The Spread Operator (...)
@@ -805,7 +796,6 @@ restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
 
-
 ///////////////////////////////////////
 // Destructuring Objects
 restaurant.orderDelivery({
@@ -846,7 +836,6 @@ const {
   fri: { open: o, close: c },
 } = openingHours;
 console.log(o, c);
-
 
 ///////////////////////////////////////
 // Destructuring Arrays

@@ -115,7 +115,7 @@ const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
 */
 
-////////////////////////////////////
+/// /////////////////////////////////
 // Coding Challenge #1
 
 /*
@@ -171,7 +171,6 @@ console.log(`String
 multiple
 lines`);
 
-
 ////////////////////////////////////
 // Taking Decisions: if / else Statements
 const age = 15;
@@ -194,7 +193,7 @@ if (birthYear <= 2000) {
 console.log(century);
 */
 
-////////////////////////////////////
+/// /////////////////////////////////
 // Coding Challenge #2
 
 /*
@@ -324,7 +323,7 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 }
 */
 
-////////////////////////////////////
+/// /////////////////////////////////
 // Coding Challenge #3
 
 /*
@@ -445,8 +444,7 @@ console.log(drink2);
 console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
 */
 
-
-////////////////////////////////////
+/// /////////////////////////////////
 // Coding Challenge #4
 
 /*

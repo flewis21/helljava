@@ -1,11 +1,11 @@
-ser# Welcome to serverless. Read the docs
+# Welcome to serverless. Read the docs
 # https://serverless.com/framework/docs/
 
 # Serverless.yml is the configuration the CLI
 # uses to deploy your code to your provider of choice
 
 # The `service` block is the name of the service
-service: helljava
+service: hellhtml
 
 frameworkVersion: '2'
 
@@ -13,6 +13,7 @@ frameworkVersion: '2'
 provider:
   name: aws
   runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
 
 # The `functions` block defines what code to deploy
 functions:
@@ -21,6 +22,14 @@ functions:
     # The `events` block defines how to trigger the handler.helloWorld code
     events:
       - http:
-          path: hello-world
+          path: /
           method: get
           cors: true
+
+plugins:
+  - serverless-offline
+custom:
+  serverless-offline:
+    httpPort: 4000
+    lambdaPort: 4002
+    noPrependStageInUrl: true

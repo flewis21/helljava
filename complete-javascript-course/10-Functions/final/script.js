@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /*
 ///////////////////////////////////////
@@ -29,7 +29,6 @@ createBooking('LH123', 2);
 createBooking('LH123', 5);
 
 createBooking('LH123', undefined, 1000);
-
 
 ///////////////////////////////////////
 // How Passing Arguments Works: Values vs. Reference
@@ -65,7 +64,6 @@ const newPassport = function (person) {
 newPassport(jonas);
 checkIn(flight, jonas);
 
-
 ///////////////////////////////////////
 // Functions Accepting Callback Functions
 const oneWord = function (str) {
@@ -95,7 +93,6 @@ const high5 = function () {
 document.body.addEventListener('click', high5);
 ['Jonas', 'Martha', 'Adam'].forEach(high5);
 
-
 ///////////////////////////////////////
 // Functions Returning Functions
 const greet = function (greeting) {
@@ -114,7 +111,6 @@ greet('Hello')('Jonas');
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
 greetArr('Hi')('Jonas');
-
 
 ///////////////////////////////////////
 // The call and apply Methods
@@ -215,10 +211,10 @@ console.log(addVAT2(100));
 console.log(addVAT2(23));
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #1
 
-/* 
+/*
 Let's build a simple poll app!
 
 A poll has a question, an array of options from which people can choose, and an array with the number of replies for each option. This data is stored in the starter object below.
@@ -233,10 +229,10 @@ Here are your tasks:
         2: Rust
         3: C++
         (Write option number)
-  
+
   1.2. Based on the input number, update the answers array. For example, if the option is 3, increase the value AT POSITION 3 of the array by 1. Make sure to check if the input is a number and if the number makes sense (e.g answer 52 wouldn't make sense, right?)
 2. Call this method whenever the user clicks the "Answer poll" button.
-3. Create a method 'displayResults' which displays the poll results. The method takes a string as an input (called 'type'), which can be either 'string' or 'array'. If type is 'array', simply display the results array as it is, using console.log(). This should be the default option. If type is 'string', display a string like "Poll results are 13, 2, 4, 1". 
+3. Create a method 'displayResults' which displays the poll results. The method takes a string as an input (called 'type'), which can be either 'string' or 'array'. If type is 'array', simply display the results array as it is, using console.log(). This should be the default option. If type is 'string', display a string like "Poll results are 13, 2, 4, 1".
 4. Run the 'displayResults' method at the end of each 'registerNewAnswer' method call.
 
 HINT: Use many of the tools you learned about in this and the last section 😉
@@ -294,7 +290,6 @@ poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
 // [5, 2, 3]
 // [1, 5, 3, 9, 6, 1]
 
-
 ///////////////////////////////////////
 // Immediately Invoked Function Expressions (IIFE)
 const runOnce = function () {
@@ -319,7 +314,6 @@ runOnce();
 // console.log(isPrivate);
 console.log(notPrivate);
 
-
 ///////////////////////////////////////
 // Closures
 const secureBooking = function () {
@@ -338,7 +332,6 @@ booker();
 booker();
 
 console.dir(booker);
-
 
 ///////////////////////////////////////
 // More Closure Examples
@@ -384,10 +377,10 @@ const perGroup = 1000;
 boardPassengers(180, 3);
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #2
 
-/* 
+/*
 This is more of a thinking challenge than a coding challenge 🤓
 
 Take the IIFE below and at the end of the function, attach an event listener that changes the color of the selected h1 element ('header') to blue, each time the BODY element is clicked. Do NOT select the h1 element again!
@@ -407,4 +400,3 @@ GOOD LUCK 😀
   });
 })();
 */
-

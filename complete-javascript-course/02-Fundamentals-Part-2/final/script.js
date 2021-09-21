@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /*
 ///////////////////////////////////////
@@ -11,7 +11,6 @@ if (hasDriversLicense) console.log('I can drive :D');
 
 // const interface = 'Audio';
 // const private = 534;
-
 
 ///////////////////////////////////////
 // Functions
@@ -37,7 +36,6 @@ console.log(appleOrangeJuice);
 
 const num = Number('23');
 
-
 ///////////////////////////////////////
 // Function Declarations vs. Expressions
 
@@ -55,7 +53,6 @@ const age2 = calcAge2(1991);
 
 console.log(age1, age2);
 
-
 ///////////////////////////////////////
 // Arrow functions
 
@@ -72,7 +69,6 @@ const yearsUntilRetirement = (birthYeah, firstName) => {
 
 console.log(yearsUntilRetirement(1991, 'Jonas')); console.log(yearsUntilRetirement(1980, 'Bob'));
 
-
 ///////////////////////////////////////
 // Functions Calling Other Functions
 function cutFruitPieces(fruit) {
@@ -87,7 +83,6 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 console.log(fruitProcessor(2, 3));
-
 
 ///////////////////////////////////////
 // Reviewing Functions
@@ -112,7 +107,7 @@ console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #1
 
 /*
@@ -163,7 +158,6 @@ scoreKoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins, scoreKoalas);
 checkWinner(scoreDolphins, scoreKoalas);
 
-
 ///////////////////////////////////////
 // Introduction to Arrays
 const friend1 = 'Michael';
@@ -204,7 +198,6 @@ console.log(age1, age2, age3);
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
 
-
 ///////////////////////////////////////
 // Basic Array Operations (Methods)
 const friends = ['Michael', 'Steven', 'Peter'];
@@ -239,7 +232,7 @@ if (friends.includes('Steven')) {
 }
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #2
 
 /*
@@ -269,7 +262,6 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(bills, tips, totals);
 
-
 ///////////////////////////////////////
 // Introduction to Objects
 const jonasArray = [
@@ -287,7 +279,6 @@ const jonas = {
   job: 'teacher',
   friends: ['Michael', 'Peter', 'Steven']
 };
-
 
 ///////////////////////////////////////
 // Dot vs. Bracket Notation
@@ -324,7 +315,6 @@ console.log(jonas);
 // Challenge
 // "Jonas has 3 friends, and his best friend is called Michael"
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
-
 
 ///////////////////////////////////////
 // Object Methods
@@ -367,7 +357,7 @@ console.log(jonas.age);
 console.log(jonas.getSummary());
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #3
 
 /*
@@ -416,7 +406,6 @@ if (mark.bmi > john.bmi) {
   console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`)
 }
 
-
 ///////////////////////////////////////
 // Iteration: The for Loop
 
@@ -435,7 +424,6 @@ if (mark.bmi > john.bmi) {
 for (let rep = 1; rep <= 30; rep++) {
   console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
 }
-
 
 ///////////////////////////////////////
 // Looping Arrays, Breaking and Continuing
@@ -489,7 +477,6 @@ for (let i = 0; i < jonas.length; i++) {
   console.log(jonas[i], typeof jonas[i]);
 }
 
-
 ///////////////////////////////////////
 // Looping Backwards and Loops in Loops
 const jonas = [
@@ -516,7 +503,6 @@ for (let exercise = 1; exercise < 4; exercise++) {
   }
 }
 
-
 ///////////////////////////////////////
 // The while Loop
 for (let rep = 1; rep <= 10; rep++) {
@@ -538,7 +524,7 @@ while (dice !== 6) {
 }
 */
 
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #4
 
 /*
