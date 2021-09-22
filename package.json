@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jonasschmedtmann/html-css-course#readme",
   "devDependencies": {
+    "express": "^4.17.1",
     "nodegit": "^0.27.0",
     "npm": "^7.24.0",
     "serverless": "^2.59.0",
