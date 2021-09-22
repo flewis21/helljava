@@ -8,7 +8,8 @@
     "plug": "serverless plugin install -n",
     "attempt": "serverless offline",
     "npm": "npm",
-    "lint": "standard"
+    "lint": "standard",
+    "dev": "nodemon app.local.js"
   },
   "repository": {
     "type": "git",
@@ -21,8 +22,10 @@
   },
   "homepage": "https://github.com/jonasschmedtmann/html-css-course#readme",
   "devDependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodegit": "^0.27.0",
+    "nodemon": "^2.0.12",
     "npm": "^7.24.0",
     "serverless": "^2.59.0",
     "serverless-offline": "^8.2.0",
