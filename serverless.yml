@@ -13,6 +13,10 @@ frameworkVersion: '2'
 provider:
   name: aws
   runtime: nodejs12.x
+  apiGateway:
+    minimumCompressionSize: 1024
+  environment:
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
   lambdaHashingVersion: 20201221
 
 # The `functions` block defines what code to deploy
@@ -28,8 +32,13 @@ functions:
 
 plugins:
   - serverless-offline
+  - serverless-apigw-binary
+  - serverless-dynamodb-local
 custom:
   serverless-offline:
     httpPort: 4000
     lambdaPort: 4002
     noPrependStageInUrl: true
+  apigwBinary:
+    types:
+      - '*/*'

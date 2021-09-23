@@ -1,21 +1,19 @@
 'use strict'
 
 const app = require('./app')
+const fs = require('fs')
+const path = require('path')
 
-module.exports.helloWorld = async (app, event) => {
+module.exports.helloWorld = async (event, context) => {
+  const html = fs.readFile('./complete-javascript-course/01-Fundamentals-Part-1/starter/index.html', 'utf-8')
   return {
     statusCode: 200,
     headers: {
-    	'Access-Control-Allow-Origin': '*'
+    	'Access-Control-Allow-Origin': '*',
+    	'Content-Type': 'text/html'
     },
-    body: JSON.stringify(
-    	{
-
-        	message: 'Go Serverless v1.0! Your function executed successfully',
-    		input: app
-    	},
-    	null,
-    	2
-    )
+    body: html
   }
+
+  context.succeed(html)
 }
