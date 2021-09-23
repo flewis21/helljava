@@ -31,9 +31,9 @@ functions:
           cors: true
 
 plugins:
+  - serverless-dynamodb-local
   - serverless-offline
   - serverless-apigw-binary
-  - serverless-dynamodb-local
 custom:
   serverless-offline:
     httpPort: 4000

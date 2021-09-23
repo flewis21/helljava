@@ -1,5 +1,5 @@
 {
-  "name": "hellhtml",
+  "name": "helljava",
   "version": "1.0.0",
   "description": "Build responsive real world websites!",
   "main": "handler.js",
@@ -9,28 +9,38 @@
     "attempt": "serverless offline",
     "npm": "npm",
     "lint": "standard",
-    "dev": "nodemon app.local.js"
+    "dev": "nodemon app.local.js",
+    "para": "serverless dynamodb"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/jonasschmedtmann/html-css-course.git"
+    "url": "git+ssh://git@github.com:jonasschmedtmann/complete-javascript-course.git"
   },
   "author": "Jonas Schmedtmann",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jonasschmedtmann/html-css-course/issues"
+    "url": "https://github.com/jonasschmedtmann/complete-javascript-course/issues"
   },
-  "homepage": "https://github.com/jonasschmedtmann/html-css-course#readme",
+  "homepage": "https://github.com/jonasschmedtmann/complete-javascript-course#readme",
   "devDependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "jsontoxml": "^1.0.1",
+    "jsonxml": "^1.0.0",
     "nodegit": "^0.27.0",
     "nodemon": "^2.0.12",
     "npm": "^7.24.0",
     "serverless": "^2.59.0",
     "serverless-apigw-binary": "^0.4.4",
+    "serverless-dynamodb-client": "^0.0.2",
     "serverless-dynamodb-local": "^0.2.40",
     "serverless-offline": "^8.2.0",
-    "standard": "^16.0.3"
+    "standard": "^16.0.3",
+    "xml2js": "^0.4.23"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "serverless-express": "^2.0.12"
   }
 }
