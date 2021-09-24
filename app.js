@@ -8,7 +8,7 @@ const path = require('path')
 let FruitBox = [];
 
 //Static content ie images
-app.use('/static', express.static('static'))
+app.use('/complete-javascript-course/01-Fundamentals-Part-1/views', express.static('views'))
 
 router.use(cors())
 router.use(bodyParser.json())
