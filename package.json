@@ -10,7 +10,8 @@
     "npm": "npm",
     "lint": "standard",
     "dev": "nodemon app.local.js",
-    "para": "serverless dynamodb"
+    "para": "serverless dynamodb",
+    "veng": "express --views=ejs"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-generator": "^4.2.0",
     "jsontoxml": "^1.0.1",
     "jsonxml": "^1.0.0",
     "nodegit": "^0.27.0",
