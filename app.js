@@ -12,34 +12,35 @@ app.use('/static', express.static('static'))
 
 router.use(cors())
 router.use(bodyParser.json())
+router.use(bodyParser.text({ type: 'text/html' }))
 router.use(bodyParser.urlencoded({ extended: true }))
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'complete-javascript-course/01Fundamentals-Part-1/starter'));
+app.set('views', path.join(__dirname, '/complete-javascript-course/01Fundamentals-Part-1/views/'));
 
-router.get('/complete-javascript-course/01-Fundamentals-Part-1/starter/', function(req, res) {
+router.get('/', function(req, res) {
     res.render('index', { fruitBox: FruitBox })
 })
 
-router.get('/complete-javascript-course/01-Fundamentals-Part-1/starter/index', function(req, res) {
+router.get('/complete-javascript-course/01-Fundamentals-Part-1/starter/index', function(req, res, next) {
     res.render('index', { fruitBox: FruitBox })
 })
 
 router.get("/complete-javascript-course/01-Fundamentals-Part-1/starter/ping", async (req, res) => {
-    const result = { incomming : 'ping ', resonse : 'pong '}
+    const result = { incomming : 'ping ', response : 'pong '}
     res.send(JSON.stringify(result))
 });
 
-router.get("/complete-javascript-course/01-Fundamentals-Part-1/starter/fruitbox", async (req, res) => {
+router.get("/complete-javascript-course/01-Fundamentals-Part-1/starter/fruitbox", async (req, res, next) => {
     res.send(JSON.stringify(FruitBox))
 });
 
-router.get("/complete-javascript-course/01-Fundamentals-Part-1/starter/fruitbox/:item", async (req, res) => {
+router.get("/complete-javascript-course/01-Fundamentals-Part-1/starter/fruitbox/:item", async (req, res, next) => {
     const item = parseInt(req.params.item)
     res.send(JSON.stringify(FruitBox[item]))
 });
 
-router.post('/complete-javascript-course/01-Fundamentals-Part-1/starter/fruitbox', async (req, res) => {
+router.post('/complete-javascript-course/01-Fundamentals-Part-1/starter/fruitbox', async (req, res, next) => {
     let result
     try{
         const fruitName = req.body.fruitName;
