@@ -1,4 +1,5 @@
-const serverlessExpress = require('@vendia/serverless-express')
-const app = require('./app')
+const serverless = require('serverless-http');
+const Dotenv = require('dotenv').config();
+const app = require('./server')
 
-exports.handler = serverlessExpress({ app })
+module.exports.handler = serverless({ app })

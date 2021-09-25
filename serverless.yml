@@ -5,7 +5,7 @@
 # uses to deploy your code to your provider of choice
 
 # The `service` block is the name of the service
-service: hellhtml
+service: helljava
 
 frameworkVersion: '2'
 
@@ -39,6 +39,7 @@ custom:
     httpPort: 4000
     lambdaPort: 4002
     noPrependStageInUrl: true
+    resourceRoutes: true
   apigwBinary:
     types:
       - '*/*'
